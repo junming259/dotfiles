@@ -1,0 +1,11 @@
+[user]
+  email = junming@umich.edu
+  name = junming zhang
+[core]
+  editor = vim
+[alias]
+  # better visualization of log
+  loggraph = log --all --graph --decorate
+
+  # Show the user email for the current repository.
+  whoami = config user.email
