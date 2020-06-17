@@ -1,8 +1,8 @@
-__Dotbot for managing dotfiles__
-===
+# Dotbot for managing dotfiles
 
-### Dotbot
-Dotbot makes installing your dotfiles easily. Dotbot is a tool that bootstraps
+
+## Dotbot
+[Dotbot](https://github.com/anishathalye/dotbot) makes installing your dotfiles easily. Dotbot is a tool that bootstraps
 your dotfiles (it's a [Dot]files [bo]o[t]strapper, get it?). It does less than
 you think, because version control systems do more than you think.
 
@@ -12,9 +12,9 @@ tool you were using to manage your dotfiles, and Dotbot is VCS-agnostic -- it
 doesn't make any attempt to manage your dotfiles.
 
 
-### Installation
-If you're using Git, you can add Dotbot as a submodule [details](https://github.com/anishathalye/dotbot/tree/f5e019105ec5a70a71d5afa78dc44baa0e87b721#integrate-with-existing-dotfiles). Here I prefer install Dotbot from PyPI and call it as a command-line
-program
+## Installation
+If you're using Git, you can add Dotbot as a submodule [details](.https://github.com/anishathalye/dotbot#integrate-with-existing-dotfiles). Here I prefer install Dotbot
+from PyPI and call it as a command-line program.
 ```shell
 pip3 install dotbot --user
 touch install.conf.yaml
@@ -24,7 +24,10 @@ by one-time solution:
 ```shell
 export PATH="$HOME/.local/bin:$PATH"
 ```
-or add it to `.bashrc` or `.zshrc`
+or add it to `.bashrc` or `.zshrc`. Then you can invoke Dotbot with:
+```shell
+dotbot -c <path to configuration file>
+```
 
-
-### Install dotfiles
+## Configuration
+Details for creating configuration files can be found [here](https://github.com/anishathalye/dotbot/tree/f5e019105ec5a70a71d5afa78dc44baa0e87b721#configuration)
