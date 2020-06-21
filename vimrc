@@ -58,14 +58,18 @@ set cursorline
 " Enable line numbers
 set number
 
+" This enables relative line numbering mode.
+set relativenumber
+
+" Tab completion for files
+set wildmenu
+set wildmode=longest:list,full
+
 " Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
 
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=
-
-" This enables relative line numbering mode.
-set relativenumber
 
 " Prevent using the arrow keys for movement.
 " Do this in normal mode...
