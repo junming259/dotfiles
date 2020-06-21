@@ -65,6 +65,25 @@ set relativenumber
 set wildmenu
 set wildmode=longest:list,full
 
+" Case-insensitive search
+set ignorecase
+
+" highlight search
+"set hlsearch
+
+" Use 4 spaces instead of tab
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smartindent
+
+" Increamental search
+set incsearch
+
+" No warp in the end
+set nowrap
+
 " Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
 
