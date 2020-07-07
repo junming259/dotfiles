@@ -93,6 +93,9 @@ set noerrorbells visualbell t_vb=
 " Highlight 80 column line
 set colorcolumn=80
 
+" Set textwith to 80, automaticcally waro lines when excceeding.
+set tw=80
+
 " Prevent using the arrow keys for movement.
 " Do this in normal mode...
 nnoremap <Left>  :echoe "Use h"<CR>
