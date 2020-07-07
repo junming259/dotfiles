@@ -90,6 +90,9 @@ set laststatus=2
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=
 
+" Highlight 80 column line
+set colorcolumn=80
+
 " Prevent using the arrow keys for movement.
 " Do this in normal mode...
 nnoremap <Left>  :echoe "Use h"<CR>
