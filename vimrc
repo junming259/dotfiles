@@ -120,6 +120,8 @@ endif
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/ycm-core/YouCompleteMe.git'
+"Plug 'https://github.com/ycm-core/YouCompleteMe.git'
+" Autocompletion for python
+Plug 'https://github.com/davidhalter/jedi-vim.git'
 
 call plug#end()
