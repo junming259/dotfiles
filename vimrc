@@ -121,7 +121,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 "Plug 'https://github.com/ycm-core/YouCompleteMe.git'
+Plug 'Valloric/YouCompleteMe'
 " Autocompletion for python
-Plug 'https://github.com/davidhalter/jedi-vim.git'
+"Plug 'https://github.com/davidhalter/jedi-vim.git'
 
 call plug#end()
