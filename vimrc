@@ -103,5 +103,13 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
+
+" Set colorscheme to gruvbox
 colorscheme gruvbox
 set background=dark
+
+" Map leader key to <space>
+let mapleader = " "
+
+" YCM: go to definition
+nnoremap <leader>gd :YcmCompleter GoTo<CR>
