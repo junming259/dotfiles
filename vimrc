@@ -100,6 +100,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --ts-completer'}
 Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -113,3 +114,6 @@ let mapleader = " "
 
 " YCM: go to definition
 nnoremap <leader>gd :YcmCompleter GoTo<CR>
+
+" Set colorscheme for lightline
+let g:lightline = {'colorscheme': 'wombat'}
