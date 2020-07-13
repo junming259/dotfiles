@@ -1,11 +1,11 @@
-# Dotbot for managing dotfiles
+# My dotfiles 
 
 
 ## Dotbot
-[Dotbot](https://github.com/anishathalye/dotbot) makes installing your dotfiles
-easily. Dotbot is a tool that bootstraps your dotfiles (it's a [Dot]files
-[bo]o[t]strapper, get it?). It does less than you think, because version control
-systems do more than you think.
+I use [Dotbot](https://github.com/anishathalye/dotbot) for managing dotfiles,
+since Dotbot makes installing dotfiles easily. Dotbot is a tool that bootstraps
+your dotfiles (it's a [Dot]files [bo]o[t]strapper). It does less than you think,
+because version control systems do more than you think.
 
 Dotbot is designed to be lightweight and self-contained, with no external
 dependencies and no installation required. Dotbot can also be a drop-in
@@ -34,15 +34,9 @@ dotbot -c <path to configuration file>
 
 ## Vim Plugins Installation
 [vim-plug](https://github.com/junegunn/vim-plug), a vim plugin manager is used
-to manage plugins for vim. Plugins can be automatically installed by reloading
-`vimrc` and `:PlugInstall` to install plugins. Note: certain plugins need
-further steps to installed.
-
-### [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
-```shell
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --{all, or specify completer}
-```
+to manage plugins for vim. Plugins can be automatically installed by sourcing
+`~/.vimrc` and `:PlugInstall` to install plugins. Basics of vim-plug can be
+found [here](https://github.com/junegunn/vim-plug/wiki/tutorial).
 
 
 ## Configuration
