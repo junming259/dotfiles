@@ -101,6 +101,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --ts-completer'}
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
+" Default markdown port: localhost:8090
+Plug 'suan/vim-instant-markdown', {'for': 'markdown',
+                                 \ 'do': 'sudo npm -g install instant-markdown-d'}
 
 call plug#end()
 
