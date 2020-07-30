@@ -98,6 +98,7 @@ endif
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'preservim/nerdcommenter'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --ts-completer'}
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
