@@ -74,6 +74,8 @@ set colorcolumn=80
 " Set textwith to 80, automaticcally waro lines when excceeding.
 set tw=80
 
+" Read when files are changed within vim, especically for git branches
+set autoread
 
 " plugins
 " Automatic installation
