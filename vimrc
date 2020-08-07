@@ -74,18 +74,6 @@ set colorcolumn=80
 " Set textwith to 80, automaticcally waro lines when excceeding.
 set tw=80
 
-" Prevent using the arrow keys for movement.
-" Do this in normal mode...
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-" ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
-
 
 " plugins
 " Automatic installation
@@ -98,13 +86,20 @@ endif
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+
 Plug 'preservim/nerdcommenter'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --ts-completer'}
-Plug 'morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
+
+
 " Default markdown port: localhost:8090
 Plug 'suan/vim-instant-markdown', {'for': 'markdown',
                                  \ 'do': 'sudo npm -g install instant-markdown-d'}
+
+" for colorscheme
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
+
 
 call plug#end()
 
@@ -116,8 +111,19 @@ set background=dark
 " Map leader key to <space>
 let mapleader = " "
 
-" YCM: go to definition
+" YCM: go to definition; references
 nnoremap <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 
-" Set colorscheme for lightline
-let g:lightline = {'colorscheme': 'wombat'}
+
+"" Set colorscheme for lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
