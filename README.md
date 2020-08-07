@@ -35,8 +35,28 @@ dotbot -c <path to configuration file>
 ## Vim Plugins Installation
 [vim-plug](https://github.com/junegunn/vim-plug), a vim plugin manager is used
 to manage plugins for vim. Plugins can be automatically installed by sourcing
-`~/.vimrc` and `:PlugInstall` to install plugins. Basics of vim-plug can be
-found [here](https://github.com/junegunn/vim-plug/wiki/tutorial).
+`~/.vimrc` and `:PlugInstall` to install plugins, `:PlugClean` to uninstall
+plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-plug/wiki/tutorial).
+
+### vim-fugitive
+- `Gstatus` or `G`: check the git status. 
+    - `s`: stage changes.
+    - `u`: unstage changes.
+    - `dd` or `D`: show diff between last commit.
+    - `:diffoff`: close diff pattern.
+    - `<c-w><c-o>`: make this window the only window.
+- `Gcommit`: commit changescommit changes.
+- `Gpush`: push commits.
+- `Git checkout branch`: checkout branch.
+- `Git loggraph`: show log graph.
+- `Gedit`: go back the current version of code.
+- `Glog`: check the commit objects.
+- `0Glog`: check reversions of commits. 
+    - `[q` and `]q`: navigation within quickfix.
+- `Git marge branch`: merge the branch into master branch.
+    - `dv`: resolve merge conflicts.
+    - `diffget //2`: keep the version of code on the left.
+    - `diffget //3`: keep the version of code on the left.
 
 
 ## Configuration
