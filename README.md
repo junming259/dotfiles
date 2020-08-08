@@ -58,6 +58,13 @@ plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-
     - `diffget //2`: keep the version of code on the left.
     - `diffget //3`: keep the version of code on the left.
 
+A example workflow is:
+
+1. `0Glog`: show history
+2. `[q` and `]q`: move between versions
+3. `Gdiff`: open `diff` comparing the version with current one
+4. `Gedit`: return to current copy
+
 
 ## Configuration
 Details for creating configuration files can be found 
