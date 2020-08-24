@@ -65,6 +65,10 @@ A example workflow is:
 3. `Gdiff`: open `diff` comparing the version with current one
 4. `Gedit`: return to current copy
 
+Compare diff on two files:
+
+1. open one of files.
+2. `Gdiff other_files`
 
 ## Configuration
 Details for creating configuration files can be found 
