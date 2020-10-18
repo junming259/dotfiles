@@ -38,6 +38,11 @@ to manage plugins for vim. Plugins can be automatically installed by sourcing
 `~/.vimrc` and `:PlugInstall` to install plugins, `:PlugClean` to uninstall
 plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-plug/wiki/tutorial).
 
+### vim basic usage
+- `gq`: warp line or block within maximum line width. 
+- `/Linear\C`: search with case sensitive, same for search and replace.
+
+
 ### vim-fugitive
 - `Gstatus` or `G`: check the git status. 
     - `s`: stage changes.
