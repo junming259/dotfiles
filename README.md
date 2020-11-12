@@ -38,11 +38,6 @@ to manage plugins for vim. Plugins can be automatically installed by sourcing
 `~/.vimrc` and `:PlugInstall` to install plugins, `:PlugClean` to uninstall
 plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-plug/wiki/tutorial).
 
-### vim basic usage
-- `gq`: warp line or block within maximum line width. 
-- `/Linear\C`: search with case sensitive, same for search and replace.
-
-
 ### vim-fugitive
 - `Gstatus` or `G`: check the git status. 
     - `s`: stage changes.
@@ -70,10 +65,24 @@ A example workflow is:
 3. `Gdiff`: open `diff` comparing the version with current one
 4. `Gedit`: return to current copy
 
+
 Compare diff on two files:
 
-1. open one of files.
-2. `Gdiff other_files`
+- Compare two files: open one of files; `Gdiff other_files`
+- Compare file with another branch: `Gdiff branch_name`
+- Compare with file in another branch: `Gdiff branch_name:path/dir/filename`
+
+
+Discard changes for unstage files:
+- Discard all changes: `Git checkout -- .`, `--` removes 
+[argument ambiguation](https://git-scm.com/docs/git-checkout#_argument_disambiguation)
+- Discard changes in a certain file: `Git checkout -- filename`
+
+
+Revert files to previous vision:
+- Revert all tracked files: `Git checkout commit_name`
+- Revert certain files: `Git checkout master~2 filename`
+
 
 ## Configuration
 Details for creating configuration files can be found 
