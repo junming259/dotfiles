@@ -84,6 +84,19 @@ Revert files to previous vision:
 - Revert certain files: `Git checkout master~2 filename`
 
 
+Remove files from repository history:
+- Reference [1](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository)
+- Reference [2](https://dalibornasevic.com/posts/2-permanently-remove-files-and-folders-from-a-git-repository)
+- Reference [3](https://github.com/18F/C2/issues/439)
+```shell
+git filter-branch --force --index-filter \
+    "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA" \
+    --prune-empty --tag-name-filter cat -- --all
+
+git push origin --force --all
+git push origin --force --tags
+```
+
 ## Configuration
 Details for creating configuration files can be found 
 [here](https://github.com/anishathalye/dotbot/tree/f5e019105ec5a70a71d5afa78dc44baa0e87b721#configuration)
