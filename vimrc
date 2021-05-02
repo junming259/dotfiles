@@ -70,11 +70,18 @@ set noerrorbells visualbell t_vb=
 " Highlight 80 column line
 set colorcolumn=80
 
+" One more column for information on the left
+set signcolumn=yes
+
 " Set textwith to 80, automaticcally waro lines when excceeding.
 set tw=80
 
 " Read when files are changed within vim, especically for git branches
 set autoread
+
+" Allow project specific vimrc
+set exrc
+set secure
 
 " plugins
 " Automatic installation
@@ -93,6 +100,12 @@ Plug 'Valloric/YouCompleteMe', {'do': './install.py --ts-completer'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 
+" for make within vim"
+Plug 'tpope/vim-dispatch'
+
+" fuzzy finder 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Default markdown port: localhost:8090
 Plug 'suan/vim-instant-markdown', {'for': 'markdown',
@@ -120,6 +133,21 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 " remap half-page down and up during normal mode navigation
 nmap <C-j> <C-d>
 nmap <C-k> <C-u>
+
+" Automatic closing brackets
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap (<CR> (<CR>)<ESC>O
+
+" project structure (tree) visualization
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
+" project search for fuzzy finder 
+nnoremap <C-p> :GFiles<CR>
 
 "" Set colorscheme for lightline
 let g:lightline = {
