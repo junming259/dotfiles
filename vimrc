@@ -92,6 +92,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --ts-completer'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
+Plug 'ctrlpvim/ctrlp.vim'
 
 
 " Default markdown port: localhost:8090
