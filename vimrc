@@ -29,6 +29,9 @@ if &term =~ '256color'
     set t_ut=
 endif
 
+" Fix backspace problem in insert mode (This is for mac)
+set backspace=indent,eol,start
+
 " Highlight current line
 set cursorline
 
@@ -96,7 +99,7 @@ call plug#begin('~/.vim/plugged')
 
 
 Plug 'preservim/nerdcommenter'
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --ts-completer'}
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --all'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -104,13 +107,16 @@ Plug 'ctrlpvim/ctrlp.vim'
 " for make within vim"
 Plug 'tpope/vim-dispatch'
 
+" sync files to remote
+Plug 'kenn7/vim-arsync'
+
 " fuzzy finder 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Default markdown port: localhost:8090
-Plug 'suan/vim-instant-markdown', {'for': 'markdown',
-                                 \ 'do': 'sudo npm -g install instant-markdown-d'}
+"Plug 'suan/vim-instant-markdown', {'for': 'markdown',
+                                 "\ 'do': 'sudo npm -g install instant-markdown-d'}
 
 " for colorscheme
 Plug 'morhetz/gruvbox'
@@ -149,6 +155,9 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 " project search for fuzzy finder 
 nnoremap <C-p> :GFiles<CR>
+
+" sync local to remote server
+nnoremap <leader>sc :ARsyncUp<CR>
 
 "" Set colorscheme for lightline
 let g:lightline = {
