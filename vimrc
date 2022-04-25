@@ -141,14 +141,14 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 nmap <C-j> <C-d>
 nmap <C-k> <C-u>
 
-" Automatic closing brackets
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap (<CR> (<CR>)<ESC>O
+"" Automatic closing brackets
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap (<CR> (<CR>)<ESC>O
 
 " project structure (tree) visualization
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>

@@ -39,30 +39,31 @@ to manage plugins for vim. Plugins can be automatically installed by sourcing
 plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-plug/wiki/tutorial).
 
 ### vim-fugitive
-- `Gstatus` or `G`: check the git status. 
+- `Gstatus` or `Git`: check the git status. 
     - `s`: stage changes.
     - `u`: unstage changes.
     - `dd` or `D`: show diff between last commit.
-    - `:diffoff`: close diff pattern.
+    - `:diffoff` or `dq`: close diff pattern.
     - `<c-w><c-o>`: make this window the only window.
-- `Gcommit`: commit changescommit changes.
-- `Gpush`: push commits.
-- `Git checkout branch`: checkout branch.
-- `Git loggraph`: show log graph.
+    - `X`: discard changes.
+- `Git commit`: commit changescommit changes.
+- `Git push`: push commits.
+- `Git checkout branch` or `Git switch branch`: switch branch.
+- `Git loggraph --oneline`: show log graph.
 - `Gedit`: go back the current version of code.
-- `Glog`: check the commit objects.
-- `0Glog`: check reversions of commits. 
+- `Gclog`: check the commit objects.
+- `0Gclog`: check reversions of commits. 
     - `[q` and `]q`: navigation within quickfix.
-- `Git marge branch`: merge the branch into master branch.
+- `Git merge branch`: merge the branch into master branch.
     - `dv`: resolve merge conflicts.
     - `diffget //2`: keep the version of code on the left.
     - `diffget //3`: keep the version of code on the left.
 
 A example workflow is:
 
-1. `0Glog`: show history
+1. `0Gclog`: show history
 2. `[q` and `]q`: move between versions
-3. `Gdiff`: open `diff` comparing the version with current one
+3. `Gdiff`: open `diff` comparing the version with current one. `[c` and `]c` to navigate between changes.
 4. `Gedit`: return to current copy
 
 
@@ -70,11 +71,11 @@ Compare diff on two files:
 
 - Compare two files: open one of files; `Gdiff other_files`
 - Compare file with another branch: `Gdiff branch_name`
-- Compare with file in another branch: `Gdiff branch_name:path/dir/filename`
+- Compare with file in another branch: `Gdiff branch_name:path/dir/filename`. `Gdiff branch_name:%` if the same file.
 
 
 Discard changes for unstage files:
-- Discard all changes: `Git checkout -- .`, `--` removes 
+- Discard all changes: `Git restore filename` or `Git checkout -- .`, `--` removes 
 [argument ambiguation](https://git-scm.com/docs/git-checkout#_argument_disambiguation)
 - Discard changes in a certain file: `Git checkout -- filename`
 
