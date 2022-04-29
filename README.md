@@ -49,15 +49,20 @@ plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-
 - `Git commit`: commit changescommit changes.
 - `Git push`: push commits.
 - `Git checkout branch` or `Git switch branch`: switch branch.
-- `Git loggraph --oneline`: show log graph.
+- `Git lg`: show log graph.
 - `Gedit`: go back the current version of code.
+- `Gedit branch:%`: open the code in another branch
 - `Gclog`: check the commit objects.
 - `0Gclog`: check reversions of commits. 
     - `[q` and `]q`: navigation within quickfix.
-- `Git merge branch`: merge the branch into master branch.
-    - `dv`: resolve merge conflicts.
-    - `diffget //2`: keep the version of code on the left.
-    - `diffget //3`: keep the version of code on the left.
+
+Git merge workflow in vim:
+- `:Git switch target_branch`: switch to the targe branch
+- `:Git merge merge_branch`: merge the merge branch to targe branch
+- `:Gvdiffsplit!`: open the three-way diff [target, copy, merge]
+    - `diffget //2` or `<leader> gh`: keep the block of code on the left (target).
+    - `diffget //3` or `<leader> gl`: keep the block of code on the right (merge).
+    - `Gwrite!`: keep the wholesale code.
 
 A example workflow is:
 
