@@ -5,12 +5,13 @@
   editor = vim
 [alias]
   # better visualization of log
-  loggraph = log --all --graph --decorate
+  lg = log --all --graph --decorate --oneline
 
   # list tracked files of current branch
   trackedfiles = ls-tree -r HEAD --name-only
 
   # Show the user email for the current repository.
   whoami = config user.email
+
 [init]
 	defaultBranch = main

@@ -159,6 +159,11 @@ nnoremap <C-p> :GFiles<CR>
 " sync local to remote server
 nnoremap <leader>sc :ARsyncUp<CR>
 
+" shortcut when git merge
+nmap <leader>gh :diffget //2<CR>
+nmap <leader>gl :diffget //3<CR>
+nmap <leader>gs :G<CR>
+
 "" Set colorscheme for lightline
 let g:lightline = {
       \ 'colorscheme': 'wombat',
