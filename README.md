@@ -38,28 +38,36 @@ to manage plugins for vim. Plugins can be automatically installed by sourcing
 `~/.vimrc` and `:PlugInstall` to install plugins, `:PlugClean` to uninstall
 plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-plug/wiki/tutorial).
 
-### vim-fugitive
-- `Gstatus` or `Git`: check the git status. 
+### cheat sheet
+- `:Gstatus` or `Git`: check the git status. 
     - `s`: stage changes.
     - `u`: unstage changes.
-    - `dd` or `D`: show diff between last commit.
+    - `dd` or `D` or `dv`: show diff between last commit.
     - `:diffoff` or `dq`: close diff pattern.
     - `<c-w><c-o>`: make this window the only window.
     - `X`: discard changes.
-- `Git commit`: commit changescommit changes.
-- `Git push`: push commits.
-- `Git checkout branch` or `Git switch branch`: switch branch.
-- `Git lg`: show log graph.
-- `Gedit`: go back the current version of code.
-- `Gedit branch:%`: open the code in another branch
-- `Gclog`: check the commit objects.
-- `0Gclog`: check reversions of commits. 
+    - `P`: stage patch code.
+- `:Git commit`: commit changescommit changes.
+- `:Git push`: push commits.
+- `:Git checkout branch` or `Git switch branch`: switch branch.
+- `:Git lg`: show log graph.
+- `:Gedit`: go back the current version of code.
+- `:Gedit branch:%`: open the code in another branch
+- `:Gclog`: check the commit objects.
+- `:0Gclog`: check reversions of commits. 
     - `[q` and `]q`: navigation within quickfix.
+- `:resize 20` or `:vertical resize 50`: to resize the split in vim.
+- `<c-w>=`: split window equally.
+- `ma`: add local mark `a`.
+- `'a`: go to the mark `a`.
+- `:marks`: list all marks.
+- `:delm`: delete all local marks.
 
-Git merge workflow in vim:
+
+Git merge workflow in vim [ref](http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/):
 - `:Git switch target_branch`: switch to the targe branch
 - `:Git merge merge_branch`: merge the merge branch to targe branch
-- `:Gvdiffsplit!`: open the three-way diff [target, copy, merge]
+- `:Gvdiffsplit!` or `:G` and `dv`: open the three-way diff [target, copy, merge]
     - `diffget //2` or `<leader> gh`: keep the block of code on the left (target).
     - `diffget //3` or `<leader> gl`: keep the block of code on the right (merge).
     - `Gwrite!`: keep the wholesale code.
@@ -75,8 +83,9 @@ A example workflow is:
 Compare diff on two files:
 
 - Compare two files: open one of files; `Gdiff other_files`
-- Compare file with another branch: `Gdiff branch_name`
-- Compare with file in another branch: `Gdiff branch_name:path/dir/filename`. `Gdiff branch_name:%` if the same file.
+- Compare files with another branch: `Gdiff branch_name`
+- Compare with files in another branch: `Gdiff branch_name:path/dir/filename`. `Gdiff branch_name:%` if the same file.
+- Compare with files that are not tracked by git: `vimdiff file1 file2`
 
 
 Discard changes for unstage files:
