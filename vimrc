@@ -102,7 +102,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --all'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 
 " for make within vim"
 Plug 'tpope/vim-dispatch'
