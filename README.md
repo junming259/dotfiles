@@ -62,26 +62,34 @@ plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-
 - `'a`: go to the mark `a`.
 - `:marks`: list all marks.
 - `:delm`: delete all local marks.
+- `:pc`: close preview window.
 
 
 Git merge workflow in vim [ref](http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/):
 - `:Git switch target_branch`: switch to the targe branch
 - `:Git merge merge_branch`: merge the merge branch to targe branch
 - `:Gvdiffsplit!` or `:G` and `dv`: open the three-way diff [target, copy, merge]
-    - `diffget //2` or `<leader> gh`: keep the block of code on the left (target).
-    - `diffget //3` or `<leader> gl`: keep the block of code on the right (merge).
-    - `Gwrite!`: keep the wholesale code.
+    - `:diffget //2` or `<leader> gh`: keep the block of code on the left (target).
+    - `:diffget //3` or `<leader> gl`: keep the block of code on the right (merge).
+    - `:Gwrite!`: keep the wholesale code.
 
-A example workflow is:
 
-1. `0Gclog`: show history
-2. `[q` and `]q`: move between versions
-3. `Gdiff`: open `diff` comparing the version with current one. `[c` and `]c` to navigate between changes.
-4. `Gedit`: return to current copy
+Compare diff workflow:
+- `:0Gclog`: show history
+- `:[q` and `]q`: move between versions
+- `:Gdiff`: open `diff` comparing the version with current one. `[c` and `]c` to navigate between changes.
+- `:Gedit`: return to current copy
+
+Search and replace workflow:
+- `<c-p>`: seach files.
+- `/cat`: search `cat` in the current file.
+- `:%s/cat/dog/gc`: search `cat` and replace with `dog` in the whole file.
+- `:Ag`: show grepping results of Ag across files in a floating window. 
+- `<leader>ag`: show grepping results of Ag in quickfix, which is useful when
+  seaching and replacing. Navigation by `[q` or `]q`
 
 
 Compare diff on two files:
-
 - Compare two files: open one of files; `Gdiff other_files`
 - Compare files with another branch: `Gdiff branch_name`
 - Compare with files in another branch: `Gdiff branch_name:path/dir/filename`. `Gdiff branch_name:%` if the same file.

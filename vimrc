@@ -114,6 +114,9 @@ Plug 'kenn7/vim-arsync'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Use grep tool (ag, ack, grep...) to start an asynchronous search
+Plug 'mhinz/vim-grepper'
+
 " Default markdown port: localhost:8090
 "Plug 'suan/vim-instant-markdown', {'for': 'markdown',
                                  "\ 'do': 'sudo npm -g install instant-markdown-d'}
@@ -162,7 +165,9 @@ nnoremap <leader>sc :ARsyncUp<CR>
 " shortcut when git merge
 nmap <leader>gh :diffget //2<CR>
 nmap <leader>gl :diffget //3<CR>
-nmap <leader>gs :G<CR>
+
+" search and show results in quickfix
+nnoremap <leader>ag :Grepper -tool ag<cr>
 
 "" Set colorscheme for lightline
 let g:lightline = {
