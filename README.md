@@ -63,6 +63,7 @@ plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-
 - `:marks`: list all marks.
 - `:delm`: delete all local marks.
 - `:pc`: close preview window.
+- `:wa`: save all open buffers.
 
 
 Git merge workflow in vim [ref](http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/):

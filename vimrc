@@ -49,7 +49,7 @@ set wildmode=longest:list,full
 set ignorecase
 
 " highlight search
-"set hlsearch
+set hlsearch
 
 " Use 4 spaces instead of tab
 set expandtab
@@ -117,6 +117,9 @@ Plug 'junegunn/fzf.vim'
 " Use grep tool (ag, ack, grep...) to start an asynchronous search
 Plug 'mhinz/vim-grepper'
 
+" Incremental search improved
+Plug 'haya14busa/is.vim'
+
 " Default markdown port: localhost:8090
 "Plug 'suan/vim-instant-markdown', {'for': 'markdown',
                                  "\ 'do': 'sudo npm -g install instant-markdown-d'}
@@ -139,10 +142,6 @@ let mapleader = " "
 " YCM: go to definition; references
 nnoremap <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
-
-" remap half-page down and up during normal mode navigation
-nmap <C-j> <C-d>
-nmap <C-k> <C-u>
 
 "" Automatic closing brackets
 "inoremap " ""<left>
