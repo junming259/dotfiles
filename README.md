@@ -64,6 +64,10 @@ plugins. Basics of vim-plug can be found [here](https://github.com/junegunn/vim-
 - `:delm`: delete all local marks.
 - `:pc`: close preview window.
 - `:wa`: save all open buffers.
+- `:Git branch -d branch_name`: delete a local branch.
+- `:Git branch -d -r origin/branch_name`: delete a local remote branch.
+- `:Git branch -d -r origin/branch_name`: delete a local remote branch.
+- `q` and `:`: search the command history in vim.
 
 
 Git merge workflow in vim [ref](http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/):
@@ -81,6 +85,7 @@ Compare diff workflow:
 - `:Gdiff`: open `diff` comparing the version with current one. `[c` and `]c` to navigate between changes.
 - `:Gedit`: return to current copy
 
+
 Search and replace workflow:
 - `<c-p>`: seach files.
 - `/cat`: search `cat` in the current file.
@@ -88,6 +93,18 @@ Search and replace workflow:
 - `:Ag`: show grepping results of Ag across files in a floating window. 
 - `<leader>ag`: show grepping results of Ag in quickfix, which is useful when
   seaching and replacing. Navigation by `[q` or `]q`
+
+
+Rebase feature branch onto main:
+- `:Git switch feature_branch` 
+- `:Git rebase main` 
+- use the merge workflow in vim to solve conflicts.
+
+
+Squash commits:
+- `:Git rebase -i HEAD~3` or 1)`:Git lg` 2) move cursor on the commit that you
+  would like to rebase 3) type `ri` to enter rebase interactive mode.
+- Squash the commits by highlighting with `s`.
 
 
 Compare diff on two files:

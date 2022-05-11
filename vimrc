@@ -79,6 +79,9 @@ set signcolumn=yes
 " Set textwith to 80, automaticcally waro lines when excceeding.
 set tw=80
 
+" Enable a count of [x/y] when searching.
+set shortmess-=S
+
 " Read when files are changed within vim, especically for git branches
 set autoread
 
